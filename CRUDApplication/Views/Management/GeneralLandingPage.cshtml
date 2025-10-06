@@ -1,0 +1,207 @@
+﻿@{
+    ViewData["Title"] = "Management Page";
+}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="~/css/styleGenLandingPage.css" asp-append-version="true" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap" rel="stylesheet">
+    </head>
+
+
+    <body>
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <div class="text-center">
+            <h1 class="mb-2"> <strong>Management Operations</strong> </h1>
+    
+            <p>These key features of EduStream help educators optimize their student information management tasks,
+            providing a reliable and intuitive platform for student data.
+            </p>
+        </div>
+
+        <br />
+
+        <div class="container">
+
+            @* add section *@ 
+            <div class="row">
+                    <div class="col-lg-6 order-lg-2 align-items-center">
+                        <img src="~/css/background image(14).jpg" alt="Administrator adding record" style="height: 97%;" />
+                    </div>
+                <div class="col-lg-6 order-lg-1 align-items-center">
+                    <h4> <strong>Adding Student Records:</strong> </h4>
+                    <p>
+                        EduStream provides educators with a seamless way to add student records to their database. 
+                        Whether you're welcoming new students to your institution or need to input historical data, 
+                        our user-friendly interface simplifies the process. With just a few clicks, you can create comprehensive student profiles, 
+                        including personal information, academic records, and more. The <a class="deco-link" asp-area="" asp-controller="Management" asp-action="Add">"Add Student"</a> feature streamlines this essential task, 
+                        ensuring that all student data is accurately recorded.
+
+                        <div class="d-grid gap-2 mt-1">
+                            <a id="add-submit" type="button" class="btn btn-success" asp-area="" asp-controller="Management" asp-action="Add">
+                                <span id="spinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="visibility: hidden;"></span>
+                                Add A New Student Record
+                            </a>
+                        </div>
+
+                    </p>
+                </div>
+            </div>
+
+            <br />
+
+            @* view all record section *@ 
+            <div class="row">
+                <div class="col-lg-6 order-lg-1 align-items-center">
+                    <img src="~/css/background image(16).jpg" alt="Administrators viewing record" style="height: 93%" />
+                </div>
+                <div class="col-lg-6 order-lg-2 align-items-center">
+                    <h4> <strong>Viewing All Student Records:</strong> </h4>
+                    <p>
+                        Efficiently managing student information requires the ability to access and review records comprehensively. 
+                        EduStream's <a class="deco-link" asp-area="" asp-controller="Management" asp-action="viewallrecord">"View All Students"</a> feature allows educators to browse student profiles based on various criteria. 
+                        Whether you're conducting research, generating reports, or simply getting an overview of your student body, 
+                        this feature provides a detailed and customizable view of all student records.
+
+                        <div class="d-grid gap-2 mt-1">
+                            <a id="viewallrecord-submit" type="button" class="btn btn-primary" asp-area="" asp-controller="Management" asp-action="viewallrecord">
+                                <span id="spinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="visibility: hidden;"></span>
+                                View all Student Records
+                            </a>
+                        </div>
+
+                    </p>
+                </div>
+            </div>
+
+            <br />
+
+            @* update section *@ 
+            <div class="row">
+                <div class="col-lg-6 order-lg-2 align-items-center">
+                    <img src="~/css/background image(9).jpg" alt="Administrator updating record" style="height: 96%" />
+                </div>
+                <div class="col-lg-6 order-lg-1 align-items-center">
+                    <h4> <strong>Updating Student Records:</strong> </h4>
+                    <p>
+                       Education is a dynamic field, and student information can change over time. 
+                       EduStream empowers educators to keep student records up-to-date effortlessly. 
+                       Our <a class="deco-link" asp-area="" asp-controller="Management" asp-action="update">"Update Student"</a> feature allows you to modify student profiles as needed. 
+                       Whether it's an address change, updated contact details, or revised academic information, 
+                       you can make adjustments swiftly. EduStream ensures that your student data remains accurate and reflects the latest changes.
+
+                       <div class="d-grid gap-2 mt-1">
+                            <a id="update-submit" type="button" class="btn btn-warning" asp-area="" asp-controller="Management" asp-action="Update">
+                                <span id="spinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="visibility: hidden;"></span>
+                                Update Student Record
+                            </a>
+                        </div>
+
+                    </p>
+                </div>
+
+            </div>
+
+            <br />
+
+            @* delete section *@ 
+            <div class="row">
+                <div class="col-lg-6 order-lg-1 align-items-center">
+                    <img src="~/css/background image(11).jpg" alt="Administrators deleting records" style="height: 91%; width:100%;" />
+                </div>
+                <div class="col-lg-6 order-lg-2 align-items-center">
+                    <h4> <strong>Deleting Student Records:</strong> </h4>
+                    <p>
+                        Occasionally, student records may need to be removed from the database, 
+                        either due to students graduating or for other reasons. 
+                        EduStream includes a secure and straightforward <a class="deco-link" asp-area="" asp-controller="Management" asp-action="delete">"Delete Student"</a> feature. 
+                        Rest assured that only authorized personnel can delete student records. 
+                        Our platform prioritizes data security and ensures that student records are managed responsibly.
+
+                        <div class="d-grid gap-2 mt-1">
+                            <a id="delete-submit" type="button" class="btn btn-danger" asp-area="" asp-controller="Management" asp-action="delete">
+                                <span id="spinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="visibility: hidden;"></span>
+                                Delete Student Record
+                            </a>
+                        </div>
+
+                    </p>
+                </div>
+
+            </div>
+
+            <br />
+        </div>
+
+        @* summary section *@ 
+        <p class="text-center mb-0">
+        With the ability to add, update, delete, and view all student records,
+        </p>
+
+        <p class="text-center">
+            EduStream is your partner in achieving efficient and accurate student management.
+        </p>
+
+    </body>
+</html>
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    @*script for the add spinner icon*@
+    <script>
+        document.getElementById("add-submit").addEventListener("click", function () 
+        {
+            document.getElementById("spinner").style.visibility = "visible";
+            setTimeout(function () 
+            {
+                document.getElementById("spinner").style.visibility = "hidden";
+            }, 5000)
+        });
+    </script>
+
+        @*script for the view all record spinner icon*@
+    <script>
+        document.getElementById("viewallrecord-submit").addEventListener("click", function () 
+        {
+            document.getElementById("spinner").style.visibility = "visible";
+            setTimeout(function () 
+            {
+                document.getElementById("spinner").style.visibility = "hidden";
+            }, 5000)
+        });
+    </script>
+
+        @*script for the update spinner icon*@
+    <script>
+        document.getElementById("update-submit").addEventListener("click", function () 
+        {
+            document.getElementById("spinner").style.visibility = "visible";
+            setTimeout(function () 
+            {
+                document.getElementById("spinner").style.visibility = "hidden";
+            }, 5000)
+        });
+    </script>
+
+        @*script for the delete spinner icon*@
+    <script>
+        document.getElementById("delete-submit").addEventListener("click", function () 
+        {
+            document.getElementById("spinner").style.visibility = "visible";
+            setTimeout(function () 
+            {
+                document.getElementById("spinner").style.visibility = "hidden";
+            }, 5000)
+        });
+    </script>
+
+}

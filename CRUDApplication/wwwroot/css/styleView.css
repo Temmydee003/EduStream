@@ -1,0 +1,35 @@
+/* background logo */
+.bg-img {
+    position: relative;
+    background: url('EduStream Logo.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.header-bar {
+    background-color: #e06913;
+    color: white;
+}
+
+#myInput {
+    background-image: url('/css/Icon_Search (2).png');
+    background-position: 2px center;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 14px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px; 
+}
+
+.logo{
+    background-image: url('/css/EduStream Logo.png');
+}
+
+/*tr:nth-child(even) {
+    background-color: #438d8d;
+}
+
+tr:nth-child(odd) {
+    background-color: #e06913;
+}*/

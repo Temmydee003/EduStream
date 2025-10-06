@@ -1,0 +1,152 @@
+body {
+     font-family: Roboto, sans-serif;
+}
+
+p, h5{
+    font-family: 'Klee One', cursive;
+    font-size: 1.5rem;
+}
+
+/* style for the header */
+.header-background {
+    background: url('background image(6).jpg');
+    animation: changebg 15s infinite alternate;
+    background-size: cover;
+}
+
+.image-container {
+    backdrop-filter: blur(5px);
+    text-align: center;
+    color: #ff6b00;
+    padding: 250px;
+    font-family: Arial, serif;
+    letter-spacing: 6px;
+}
+
+.display-2 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.display-4{
+    font-size: 1.5rem;
+    margin-top: 20px;
+    font-weight: 100;
+}
+
+/* */
+h2 {
+    font-size: 2rem;
+    color: #ff6b00;
+    letter-spacing: 2px;
+}
+
+h4 {
+    color: #ff6b00;
+    letter-spacing: 1px;
+}
+
+
+.list-bold {
+    letter-spacing: 1px;
+}
+
+.about-section {
+    position: relative;
+    z-index: 1;
+}
+
+.navbar {
+    z-index: 2;
+}
+
+strong {
+    color: #ff6b00;
+}
+
+ul{
+    padding-left: 20px;
+}
+
+.header-nav {
+    font-family: 'Klee One', cursive;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+li {
+    margin-bottom: 10px;
+    font-family: 'Klee One', cursive;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+a {
+    color: #ff6b00;
+    text-decoration: none;
+}
+
+mag-link:hover {
+    text-decoration: underline;
+}
+
+#home, #about, #contact {
+/*    padding-top: 90px;
+    background-color: #f3f3f3;
+    margin: 5px 0;*/
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+footer {
+    background-color: #77D4FC;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+/* Style for the loading icon property */
+#loader {
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 12px solid #FC8A77;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+}
+
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+ /* style for the chnaging of header background */
+@keyframes changebg {
+    0% {
+        background-image: url('background image(7).jpg');
+        background-size: cover;
+    }
+    20% {
+        background-image: url('background image(8).jpg');
+        background-size: cover;
+    }
+    40% {
+        background-image: url('background image(9).jpg');
+        background-size: cover;
+    }
+}

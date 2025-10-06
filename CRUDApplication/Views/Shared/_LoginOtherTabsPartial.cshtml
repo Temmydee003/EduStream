@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using CRUDApplication.Areas.Identity.Data
+
+@inject SignInManager<CRUDApplicationUser> SignInManager
+@inject UserManager<CRUDApplicationUser> UserManager
+
+<ul class="navbar-nav" id="nav-bar">
+@if (SignInManager.IsSignedIn(User))
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark header-nav" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+    </li>
+    <li class="nav-item">
+        <a href="#about" class="nav-link text-dark header-nav">About</a>
+    </li>
+     <li class="nav-item">
+        <a href="#contact" class="nav-link text-dark header-nav">Contact</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark header-nav" asp-area="" asp-controller="Management" asp-action="GeneralLandingPage">Management</a>
+    </li>
+@*    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </li>*@
+}
+</ul>
+

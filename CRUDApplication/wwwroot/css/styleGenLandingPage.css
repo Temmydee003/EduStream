@@ -1,0 +1,54 @@
+body {
+    font-family: Roboto, sans-serif;
+}
+
+strong {
+    color: #ff6b00;
+}
+
+p {
+    font-family: 'Klee One', cursive;
+    font-size: 1.5rem;
+}
+
+.header-nav {
+    font-family: 'Klee One', cursive;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* style for the zig zag features of the page */
+.row {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.col-lg-6 {
+    margin: 20px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* for the redirecting */
+.deco-link {
+    color: #ff6b00;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.deco-link:hover {
+    color: blue;
+}
+
+/* Save button */
+.orange-button {
+    background-color: #ff6b00;
+    border-color: #FFA500;
+    color: #ffffff;
+}

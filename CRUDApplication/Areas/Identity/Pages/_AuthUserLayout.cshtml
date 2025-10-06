@@ -1,0 +1,100 @@
+﻿@{
+    @*importing "Layout view" in shared folder*@
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+</head>
+
+@*combining the Login and Register view, so they can both be seen at a glance *@
+<body>
+    <div id="loader" class="center"></div>
+    <div class="bg-img">
+        <br />
+        <br />
+        <br />
+        <div class="row justify-content-center">
+            <div class="col-5 mt-5">
+                <div class="card login-logout-card">
+                    <div class="card-header">
+                     <ul class="nav nav-tabs card-header-tabs">
+                         <li class="nav-item">
+                               <a class="nav-link" href="/Identity/Account/Login">
+                                  Log In
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="/Identity/Account/Register">
+                                  Register
+                              </a>
+                            </li>
+                      </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="row justify-content-center">
+                            <div class="col-10 my-4">
+                                @RenderBody()
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</body>
+
+@section Scripts{
+    @await RenderSectionAsync("Scripts", required: false)
+        @* script to mark active section per click*@
+        <script>
+        $(function () {
+            const currentPage = location.pathname;
+            $('.nav-tabs li a').each(function () {
+                const $this = $(this);
+                if (currentPage.toLowerCase().indexOf($this.attr('href').toLowerCase()) !== -1) {
+                    $this.addClass('active');
+                }
+            })
+        })
+    </script>
+        @*script for the loading icon*@
+    <script>
+        document.onreadystatechange = function () 
+        {
+            if (document.readyState !== "complete") {
+                document.querySelector(
+                    "body").style.visibility = "hidden";
+                document.querySelector(
+                    "#loader").style.visibility = "visible";
+            } else {
+                document.querySelector(
+                    "#loader").style.display = "none";
+                document.querySelector(
+                    "body").style.visibility = "visible";
+            }
+        };
+    </script>
+}
+
+
+
+@*                 
+    <!-- To Add the logo at the top -->
+        <div class="card-header text-center">
+                <img src="https://shorturl.at/KVXZ7" alt="EduStream Logo" class="navbar-logo" />
+        </div>
+*@
+
+
+
+
+
+
+
+
+
+
+
+
+

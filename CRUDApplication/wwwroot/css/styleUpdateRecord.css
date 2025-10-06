@@ -1,0 +1,56 @@
+/* the form body */
+.card {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+}
+/* background logo */
+.bg-img {
+    background: url('EduStream Logo.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+/* Save button */
+.orange-button {
+    background-color: #ff6b00;
+    border-color: #FFA500;
+    color: #ffffff;
+}
+
+/* for the break in between*/
+.br-medium {
+    display: block;
+    margin-bottom: 4em;
+}
+
+/* Form Title #77D4FC */
+.card-header {
+    background-color: #e06913;
+    color: #f3f3f3;
+}
+
+/* Style for the loading icon property ff6b00 */
+#loader {
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 12px solid #ff6b00;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+}
+
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+

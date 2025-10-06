@@ -1,0 +1,79 @@
+﻿@page
+@model RegisterModel
+@{
+    // importing the "AuthUserLayout" partial view
+    Layout = "~/Areas/Identity/Pages/_AuthUserLayout.cshtml";
+}
+
+
+<head>
+
+</head>
+
+<body>
+    <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+        <h2>Create An Account</h2>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.FirstName" class="form-control" autocomplete="firstname" aria-required="true" />
+                    <label asp-for="Input.FirstName">First Name</label>
+                    <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+                </div>
+            </div>
+           <div class="col-6">
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.LastName" class="form-control" autocomplete="lastname" aria-required="true" />
+                    <label asp-for="Input.LastName">Last Name</label>
+                    <span asp-validation-for="Input.LastName" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
+            <label asp-for="Input.Email">Email</label>
+            <span asp-validation-for="Input.Email" class="text-danger"></span>
+        </div>
+
+        @*password section*@
+        <div class="form-floating mb-3">
+            <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" />
+            <label asp-for="Input.Password"></label>
+            <span asp-validation-for="Input.Password" class="text-danger"></span>
+        </div>
+
+        @*confirm password section*@
+        <div class="form-floating mb-3">
+            <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
+            <label asp-for="Input.ConfirmPassword"></label>
+            <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+        </div>
+
+        @*botton section*@
+        <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-info">
+            <span id="spinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="visibility: hidden;"></span>
+            Register
+        </button>
+    </form>
+</body>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    @*script for the spinner icon*@
+    <script>
+        document.getElementById("registerSubmit").addEventListener("click", function () 
+        {
+            document.getElementById("spinner").style.visibility = "visible";
+            setTimeout(function () 
+            {
+                document.getElementById("spinner").style.visibility = "hidden";
+            }, 9000)
+        });
+    </script>
+
+}

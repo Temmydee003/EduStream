@@ -1,0 +1,225 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/stylehomepage.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="loader" class="center"></div>
+    <br />
+    <br />
+    <br />
+
+    <!-- header -->
+    <div class="header-background">
+        <div class="image-container">
+                <h1 class="display-2"><em>Welcome To EduStream</em></h1>
+                <h3 class="display-4"><em>Your one-stop platform for managing 
+                    students' information effortlessly.</em>
+                </h3>  
+        </div>
+    </div>
+    <br />
+
+    <!-- intro -->
+    <section id="home" class="py-5">
+        <div class="container text-center">
+        <h2 class="mb-4"><strong>INTRODUCTION</strong></h2>
+        <p>
+            We understand the challenges educators face when it comes to handling student data efficiently. 
+            With <strong>EduStream</strong>, you can streamline your student management 
+            tasks and focus on what truly matters – providing quality education.
+        </p>
+        </div>
+        
+        <br />
+
+        <h4><strong>Key Features</strong></h4>
+        <p>
+            <ul>
+                <li>
+                    <strong class="list-bold">User-Friendly Interface:</strong> Our intuitive interface makes 
+                    it easy for educators to navigate and manage student information.
+                </li>
+                <li>
+                    <strong class="list-bold">Comprehensive Student Profiles:</strong> Create detailed profiles for each student, 
+                    including personal details, academic records, and more.
+                </li>
+                <li>
+                    <strong class="list-bold">Search and Filter:</strong> Easily search for specific students or apply filters 
+                    to view students based on various criteria.
+                </li>
+                <li>
+                    <strong class="list-bold">Secure and Reliable:</strong> Rest assured that your student data is secure and 
+                    accessible only to authorized personnel.
+                </li>
+            </ul>
+        </p>
+
+        <br />
+
+        <h4><strong>Get Started:</strong></h4>
+        <p class="mb-0">
+            Are you ready to experience a more efficient way to manage student data?
+        <p>
+            Click on the <a class="mag-link" asp-area="" asp-controller="Management" asp-action="GeneralLandingPage">Management</a> button and get started today.
+            Join the ranks of educators who have embraced the future of student information management.
+        </p>
+    </section>
+
+    <br />
+    <!-- About -->
+    <section id=about class="about-section  pt-5 mt-5 ">
+        <div class="container text-center">
+        <h2 class="mb-4"><strong>ABOUT</strong></h2>
+        <p>
+            At EduStream, our mission is to simplify the student information management process for educators and 
+            institutions. We believe that educators should spend their time teaching, not drowning in paperwork. 
+            Our platform is designed to make student management more efficient and less time-consuming.
+        </p>
+        </div>
+
+        <br />
+
+        <h4><strong>Why Choose EduStream:</strong></h4>
+        <p>
+            <ul>
+                <li>
+                    <strong class="list-bold">Experience:</strong> With years of experience in the education sector, we understand the unique challenges educators face. 
+                    EduStream is tailored to meet those challenges head-on.
+                </li>
+                <li>
+                    <strong class="list-bold">Innovation:</strong> We're committed to innovation, constantly 
+                    improving our platform to meet the changing needs of the education community.
+                </li>
+                <li>
+                    <strong class="list-bold">Customer Support:</strong> Our dedicated support team is always ready to assist you, 
+                    ensuring you get the most out of EduStream.
+                </li>
+                <li>
+                    <strong class="list-bold">Security:</strong> We take the security and privacy of your student data seriously, 
+                    implementing top-notch security measures.
+                </li>
+            </ul>
+        </p>
+        
+        </section>
+
+        <br />
+    <!-- Contact -->
+    <section id="contact">
+        <h2 class="text-center"><strong>CONTACT</strong></h2>
+        <h4><strong>Get in Touch</strong></h4>
+        <p>Have questions, feedback, or need assistance? We're here to help. 
+            Contact us through the following methods:
+    
+            <ul>
+                <li>
+                    <strong>Email:</strong>
+                </li>
+                <li>
+                    <strong>Phone:</strong>
+                </li>
+                <li>
+                    <strong>Address:</strong>
+                </li>
+            </ul>    
+        </p>
+
+        <h4><strong>Support Hours:</strong></h4>
+        <p>
+            Our support team is available during the following hours:
+
+            <ul>
+                <li>
+                    <strong>Monday-Friday:</strong> 9:00am - 8:00pm
+                </li>
+                <li>
+                    <strong>Saturday:</strong> 10:30am - 6:00pm
+                </li>
+                <li>
+                    <strong>Sunday:</strong> 3:00pm - 8:00pm
+                </li>
+            </ul>
+        </p>
+
+        <h4><strong>Connect on Social Media:</strong></h4>
+        <p>
+            Stay updated with the latest EduStream news, updates, 
+            and education trends by following us on social media:
+            <ul>
+                <li>
+                    Facebook link
+                </li>
+                <li>
+                    Linkdln link
+                </li>
+                <li>
+                    Instagram Link  <!-- can add other socials also...  -->
+                </li>
+            </ul>
+        </p>
+    </section>
+
+    <h5 class="text-center">
+        EduStream is committed to providing a seamless experience for educators. 
+    </h5>
+    <h5 class="text-center">
+        Contact us today, and let us assist you in optimizing your student information management.
+    </h5>
+    <br />
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@section Scripts{
+    @*script for the loading icon*@
+      <script>
+        document.onreadystatechange = function ()
+        {
+            if (document.readyState !== "complete") 
+            {
+                document.querySelector(
+                    "body").style.visibility = "hidden";
+                document.querySelector(
+                    "#loader").style.visibility = "visible";
+            } 
+            else 
+            {
+                document.querySelector(
+                    "#loader").style.display = "none";
+                document.querySelector(
+                    "body").style.visibility = "visible";
+            }
+        };
+    </script>
+
+}

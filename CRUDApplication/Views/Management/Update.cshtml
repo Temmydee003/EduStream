@@ -1,0 +1,74 @@
+﻿@model List<CRUDApplication.Models.Domain.StudentsRecord>
+
+<head>
+    <link rel="stylesheet" href="~/css/styleUpdate.css" asp-append-version="true" />
+</head>
+
+<div class="bg-img">
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1 class="mb-2 text-center">STUDENT RECORD TABLE</h1>
+    <div class="table-responsive"> @*to make table to be adjustable on smaller screens*@
+        <input type="text" id="myInput" onkeyup="myfunction()" placeholder="Search for matric number..." />
+        <table class="table table-bordered table-striped" id="myTable">@*add border and stripes between row and columns*@
+            <thead class="thead-light">
+                <tr class="header-bar">
+                    <th scope="col">Student ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email Address</th>
+                    <th scope="col">Matric Number</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Level</th>
+                    <th>    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @*looping through the model(database) to display all students records*@
+                @foreach (var student in Model)
+                {
+                    <tr>
+                        <td>@student.Id</td>
+                        <td>@student.Name</td>
+                        <td>@student.Email</td>
+                        <td>@student.MatricNumber</td>
+                        <td>@student.Department</td>
+                        <td>@student.Level</td>
+                        <td>
+                            <a asp-controller="Management" asp-action="UpdateRecord" asp-route-id="@student.Id" class="btn btn-warning btn-sm">UPDATE</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        </div>
+</div>
+
+
+@* scripts to filter student record by supplying a valid matric number*@
+@section Scripts {
+    <script>
+        function myfunction(){
+          // declaration of variables
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+
+          // Loop through all table rows, and hide those who don't match the search query
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[3];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }
+          }
+        }
+    </script>
+}
