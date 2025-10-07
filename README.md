@@ -18,7 +18,7 @@ It allows users to manage student records efficiently through basic **CRUD opera
 ## How to Run
 ```bash
 # Clone the repository
-git clone https://github.com/Temmydee003/EduStream.git
+git clone https://github.com/temmydee-dev/EduStream.git
 
 # Navigate to CRUDApplication.sln
 
